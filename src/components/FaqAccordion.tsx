@@ -27,11 +27,11 @@ export function FaqAccordion({ faqs }: { faqs: FAQ[] }) {
               aria-expanded={open}
               onClick={() => setOpenId(open ? null : faq.id)}
             >
-              <span className="font-display text-xl text-brown md:text-2xl">
+              <span className="min-w-0 flex-1 font-display text-lg text-brown sm:text-xl md:text-2xl">
                 {faq.question}
               </span>
               <span
-                className={`text-gold transition ${open ? "rotate-45" : ""}`}
+                className={`shrink-0 text-gold transition ${open ? "rotate-45" : ""}`}
                 aria-hidden
               >
                 +

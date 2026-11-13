@@ -30,9 +30,11 @@ export function Header() {
         scrolled ? "shadow-[0_8px_24px_rgba(44,24,16,0.12)]" : ""
       }`}
     >
-      <div className="bg-brown text-cream">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-          <Logo variant="light" />
+      <div className="relative bg-brown text-cream">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:gap-4 md:px-6">
+          <div className="min-w-0">
+            <Logo variant="light" />
+          </div>
 
           <nav className="hidden items-center gap-7 lg:flex">
             {NAV_LINKS.map((link) => (
@@ -55,7 +57,7 @@ export function Header() {
             </Link>
           </nav>
 
-          <div className="flex items-center gap-3 lg:hidden">
+          <div className="flex shrink-0 items-center gap-3 lg:hidden">
             <a
               href={BRAND.phoneHref}
               className="text-sm font-semibold text-gold"
@@ -82,34 +84,34 @@ export function Header() {
             </button>
           </div>
         </div>
-      </div>
 
-      {open && (
-        <div className="fixed inset-0 top-[68px] z-40 bg-charcoal/95 px-6 py-8 lg:hidden">
-          <nav className="flex flex-col gap-5">
-            {NAV_LINKS.map((link) => (
+        {open && (
+          <div className="absolute left-0 right-0 top-full z-40 h-[calc(100dvh-100%)] overflow-y-auto bg-charcoal/95 px-6 py-8 lg:hidden">
+            <nav className="flex flex-col gap-5">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="font-display text-2xl text-cream sm:text-3xl"
+                >
+                  {link.label}
+                </Link>
+              ))}
               <Link
-                key={link.href}
-                href={link.href}
+                href="/estimate"
                 onClick={() => setOpen(false)}
-                className="font-display text-3xl text-cream"
+                className="btn-primary mt-4 w-full"
               >
-                {link.label}
+                Request Free Estimate
               </Link>
-            ))}
-            <Link
-              href="/estimate"
-              onClick={() => setOpen(false)}
-              className="btn-primary mt-4 w-full"
-            >
-              Request Free Estimate
-            </Link>
-            <a href={BRAND.phoneHref} className="text-center text-gold">
-              {BRAND.phone}
-            </a>
-          </nav>
-        </div>
-      )}
+              <a href={BRAND.phoneHref} className="text-center text-gold">
+                {BRAND.phone}
+              </a>
+            </nav>
+          </div>
+        )}
+      </div>
     </header>
   );
 }

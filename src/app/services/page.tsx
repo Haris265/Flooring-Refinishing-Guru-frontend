@@ -19,7 +19,9 @@ export default async function ServicesPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
             What we do
           </p>
-          <h1 className="mt-3 font-display text-5xl md:text-6xl">Services</h1>
+          <h1 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl">
+            Services
+          </h1>
           <p className="mt-4 max-w-2xl text-cream/80 leading-relaxed">
             Explore flooring installation and refinishing plus complete home
             renovation services. Every project starts with a free in-home

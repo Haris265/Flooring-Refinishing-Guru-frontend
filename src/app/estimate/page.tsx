@@ -16,7 +16,7 @@ export default function EstimatePage() {
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold-deep">
           Free in-home estimates
         </p>
-        <h1 className="mt-3 font-display text-5xl text-brown md:text-6xl">
+        <h1 className="mt-3 font-display text-4xl text-brown sm:text-5xl md:text-6xl">
           Tell us about your project
         </h1>
         <p className="mt-4 max-w-2xl text-muted leading-relaxed">

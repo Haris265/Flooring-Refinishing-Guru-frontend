@@ -27,7 +27,9 @@ export default async function ProjectsPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
             Portfolio
           </p>
-          <h1 className="mt-3 font-display text-5xl md:text-6xl">Projects</h1>
+          <h1 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl">
+            Projects
+          </h1>
           <p className="mt-4 max-w-2xl text-cream/80 leading-relaxed">
             From full-room flooring to stairs, tile, and remodel finishes —
             explore examples of residential work across Orange County.

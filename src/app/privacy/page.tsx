@@ -10,7 +10,9 @@ export default function PrivacyPage() {
   return (
     <section className="section-pad">
       <div className="mx-auto max-w-3xl">
-        <h1 className="font-display text-5xl text-brown">Privacy Policy</h1>
+        <h1 className="font-display text-4xl text-brown sm:text-5xl md:text-6xl">
+          Privacy Policy
+        </h1>
         <div className="mt-8 space-y-4 text-muted leading-relaxed">
           <p>
             {BRAND.name} (&quot;we&quot;) collects information you submit through

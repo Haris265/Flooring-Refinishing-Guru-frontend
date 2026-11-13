@@ -15,7 +15,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="relative min-h-[88vh] overflow-hidden">
+      <section className="relative min-h-[75vh] overflow-hidden sm:min-h-[88vh]">
         <Image
           src={HERO_IMAGE}
           alt="Modern home with hardwood flooring"
@@ -25,11 +25,11 @@ export default async function HomePage() {
           sizes="100vw"
         />
         <div className="hero-gradient absolute inset-0" />
-        <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 md:justify-center md:px-6 md:pb-24">
-          <p className="fade-up text-xs font-semibold uppercase tracking-[0.28em] text-gold">
+        <div className="relative mx-auto flex min-h-[75vh] max-w-6xl flex-col justify-end px-4 pb-12 pt-20 sm:min-h-[88vh] sm:pb-16 sm:pt-28 md:justify-center md:px-6 md:pb-24">
+          <p className="fade-up text-xs font-semibold uppercase tracking-[0.18em] text-gold sm:tracking-[0.28em]">
             {BRAND.years}+ years of experience
           </p>
-          <h1 className="fade-up font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-white md:text-7xl">
+          <h1 className="fade-up font-display mt-4 max-w-3xl text-4xl leading-[1.05] text-white sm:text-5xl md:text-7xl">
             Flooring &amp; Refinishing Guru
           </h1>
           <p className="fade-up-delay mt-5 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg">
@@ -37,11 +37,11 @@ export default async function HomePage() {
             and home renovation across Orange County — request your free
             in-home estimate today.
           </p>
-          <div className="fade-up-delay mt-8 flex flex-wrap gap-3">
-            <Link href="/estimate" className="btn-primary">
+          <div className="fade-up-delay mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link href="/estimate" className="btn-primary w-full sm:w-auto">
               Request Free Estimate
             </Link>
-            <a href={BRAND.phoneHref} className="btn-ghost">
+            <a href={BRAND.phoneHref} className="btn-ghost w-full sm:w-auto">
               Call {BRAND.phone}
             </a>
           </div>

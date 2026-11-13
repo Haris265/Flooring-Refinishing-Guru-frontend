@@ -1,3 +1,8 @@
+import {
+  STATIC_FAQS,
+  STATIC_PROJECTS,
+  STATIC_SERVICES,
+} from "./fallback-data";
 import type { FAQ, Project, Service, SiteSettings } from "./types";
 
 const API_URL =
@@ -26,11 +31,15 @@ export function getApiBase() {
   return API_URL;
 }
 
+function getStaticService(slug: string): Service | null {
+  return STATIC_SERVICES.find((s) => s.slug === slug) ?? null;
+}
+
 export async function getServices(): Promise<Service[]> {
   try {
     return await fetchApi<Service[]>("/services/");
   } catch {
-    return [];
+    return STATIC_SERVICES;
   }
 }
 
@@ -38,7 +47,7 @@ export async function getService(slug: string): Promise<Service | null> {
   try {
     return await fetchApi<Service>(`/services/${slug}/`);
   } catch {
-    return null;
+    return getStaticService(slug);
   }
 }
 
@@ -46,7 +55,7 @@ export async function getProjects(): Promise<Project[]> {
   try {
     return await fetchApi<Project[]>("/projects/");
   } catch {
-    return [];
+    return STATIC_PROJECTS;
   }
 }
 
@@ -54,7 +63,7 @@ export async function getFaqs(): Promise<FAQ[]> {
   try {
     return await fetchApi<FAQ[]>("/faqs/");
   } catch {
-    return [];
+    return STATIC_FAQS;
   }
 }
 

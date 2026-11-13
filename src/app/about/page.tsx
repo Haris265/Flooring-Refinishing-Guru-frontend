@@ -18,7 +18,7 @@ export default function AboutPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
             About us
           </p>
-          <h1 className="mt-3 max-w-3xl font-display text-5xl md:text-6xl">
+          <h1 className="mt-3 max-w-3xl font-display text-4xl sm:text-5xl md:text-6xl">
             Trusted craftsmanship, beautiful results
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-cream/80 leading-relaxed">
@@ -31,7 +31,7 @@ export default function AboutPage() {
 
       <section className="section-pad">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-center">
-          <div className="relative min-h-[320px] overflow-hidden">
+          <div className="relative min-h-[240px] overflow-hidden sm:min-h-[320px]">
             <Image
               src="/images/card-front.jpg"
               alt="Flooring & Refinishing Guru business card"
