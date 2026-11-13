@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  --brown: #2c1810;
+  --brown-soft: #3d2418;
+  --gold: #c4a35a;
+  --gold-deep: #a8843a;
+  --charcoal: #1a1512;
+  --ink: #2a221c;
+  --cream: #f7f1e8;
+  --sand: #ebe2d4;
+  --muted: #6b5e52;
+  --white: #ffffff;
+  --background: var(--cream);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brown: var(--brown);
+  --color-brown-soft: var(--brown-soft);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-charcoal: var(--charcoal);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-source);
+  --font-display: var(--font-cormorant);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-source), "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--gold) 40%, transparent);
+}
+
+.hero-gradient {
+  background:
+    linear-gradient(
+      105deg,
+      rgba(26, 21, 18, 0.82) 0%,
+      rgba(44, 24, 16, 0.55) 48%,
+      rgba(44, 24, 16, 0.25) 100%
+    ),
+    linear-gradient(180deg, rgba(26, 21, 18, 0.2), rgba(26, 21, 18, 0.65));
+}
+
+.wood-grain {
+  background-color: var(--sand);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(196, 163, 90, 0.18), transparent 45%),
+    radial-gradient(ellipse at 90% 80%, rgba(44, 24, 16, 0.08), transparent 40%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 48px,
+      rgba(44, 24, 16, 0.025) 48px,
+      rgba(44, 24, 16, 0.025) 49px
+    );
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--gold);
+  color: var(--brown);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.4rem;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: var(--gold-deep);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(44, 24, 16, 0.18);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: var(--white);
+  padding: 0.85rem 1.4rem;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--gold);
+}
+
+.section-pad {
+  padding: 4.5rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding: 6rem 2rem;
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease both;
+}
+
+.fade-up-delay {
+  animation: fadeUp 0.9s ease 0.15s both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-tile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.service-tile:hover {
+  transform: translateY(-4px);
+  border-bottom-color: var(--gold);
+  box-shadow: 0 16px 36px rgba(44, 24, 16, 0.1);
+}
