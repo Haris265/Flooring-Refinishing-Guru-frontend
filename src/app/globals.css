@@ -161,3 +161,10 @@ a {
   border-bottom-color: var(--gold);
   box-shadow: 0 16px 36px rgba(44, 24, 16, 0.1);
 }
+
+/* Netlify Drop / inject badge */
+a[href*="netlify.com"][style*="position: fixed"],
+a[href*="netlify.app"][style*="position: fixed"],
+body > a[href*="netlify.com"]:last-of-type {
+  display: none !important;
+}
