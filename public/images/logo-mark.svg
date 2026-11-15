@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Flooring Guru mark">
+  <defs>
+    <linearGradient id="g" x1="16" y1="10" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6CD82"/>
+      <stop offset="0.5" stop-color="#C4A35A"/>
+      <stop offset="1" stop-color="#9A7838"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full house silhouette (complete, not cut) -->
+  <path
+    fill="none"
+    stroke="url(#g)"
+    stroke-width="5.5"
+    stroke-linejoin="miter"
+    stroke-linecap="square"
+    d="
+      M 30 64
+      L 22 64
+      L 22 38
+      L 52 12
+      L 58 17
+      L 58 13
+      L 66 13
+      L 66 20
+      L 92 42
+      L 100 42
+      L 100 92
+      L 30 92
+      Z
+    "
+  />
+
+  <!-- Left eave overhang (card detail) -->
+  <path
+    fill="none"
+    stroke="url(#g)"
+    stroke-width="5.5"
+    stroke-linecap="square"
+    d="M22 48 H34"
+  />
+
+  <!-- 4-pane window -->
+  <g fill="none" stroke="url(#g)" stroke-width="3.2">
+    <rect x="66" y="34" width="20" height="20"/>
+    <path d="M76 34 V54 M66 44 H86"/>
+  </g>
+
+  <!-- Diagonal floor planks — spaced cleanly, no muddy overlap -->
+  <g stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M34 58 L78 80" stroke="#C4A35A" stroke-width="6"/>
+    <path d="M32 66 L76 88" stroke="#8F8678" stroke-width="6"/>
+    <path d="M30 74 L70 94" stroke="#5C564F" stroke-width="6"/>
+    <path d="M28 82 L60 98" stroke="#35312E" stroke-width="6"/>
+  </g>
+</svg>

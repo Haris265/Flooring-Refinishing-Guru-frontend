@@ -31,14 +31,17 @@ export default function AboutPage() {
 
       <section className="section-pad">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-center">
-          <div className="relative min-h-[240px] overflow-hidden sm:min-h-[320px]">
-            <Image
-              src="/images/card-front.jpg"
-              alt="Flooring & Refinishing Guru business card"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+          <div className="overflow-hidden border border-brown/10 bg-cream p-3 sm:p-4">
+            <div className="relative aspect-[1024/572] w-full overflow-hidden bg-cream">
+              <Image
+                src="/images/business-card.jpg"
+                alt="Flooring & Refinishing Guru business card"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
           </div>
           <div>
             <h2 className="font-display text-4xl text-brown">

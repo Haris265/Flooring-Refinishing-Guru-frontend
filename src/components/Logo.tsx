@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type LogoProps = {
@@ -6,46 +7,47 @@ type LogoProps = {
 };
 
 export function Logo({ variant = "dark", className = "" }: LogoProps) {
-  const text = variant === "light" ? "text-white" : "text-brown";
-  const accent = "text-gold";
+  const isLight = variant === "light";
+  const line1 = isLight ? "text-cream" : "text-brown";
+  const guru = isLight ? "text-[#c45c5c]" : "text-[#7a1f2b]";
+  const tag = isLight ? "text-cream/75" : "text-brown/75";
 
   return (
     <Link
       href="/"
-      className={`group flex min-w-0 items-center gap-2 sm:gap-3 ${className}`}
+      className={`group flex min-w-0 items-center gap-2 ${className}`}
+      aria-label="Flooring & Refinishing Guru home"
     >
-      <span
-        className="relative flex h-9 w-9 shrink-0 items-center justify-center border border-gold/70 bg-brown text-gold sm:h-11 sm:w-11"
-        aria-hidden
-      >
-        <svg viewBox="0 0 40 40" className="h-6 w-6 sm:h-7 sm:w-7" fill="none">
-          <path
-            d="M8 28V16.5L20 8l12 8.5V28"
-            stroke="currentColor"
-            strokeWidth="1.6"
-          />
-          <path
-            d="M10 28h20M12 28v-4.5l8-5.5 8 5.5V28"
-            stroke="currentColor"
-            strokeWidth="1.4"
-          />
-          <path
-            d="M14 28l4-3.2M18 28l4-3.2M22 28l4-3.2"
-            stroke="currentColor"
-            strokeWidth="1.2"
-          />
-        </svg>
-      </span>
-      <span className="min-w-0 leading-tight">
+      <Image
+        src="/images/logo-mark.png"
+        alt=""
+        width={48}
+        height={44}
+        className="h-9 w-auto shrink-0 sm:h-10"
+        priority
+      />
+      <span className="min-w-0 leading-[1.05]">
         <span
-          className={`block truncate font-display text-base font-semibold tracking-wide sm:text-lg md:text-xl ${text}`}
+          className={`block font-display text-[0.85rem] font-semibold tracking-wide sm:text-[1.05rem] ${line1}`}
         >
-          Flooring <span className={accent}>&</span> Refinishing
+          Flooring <span className="text-gold">&amp;</span>
+        </span>
+        <span className="block font-display text-[0.85rem] font-semibold tracking-wide text-gold sm:text-[1.05rem]">
+          Refinishing
+        </span>
+        <span className="mt-px flex items-center gap-1">
+          <span className="h-px w-2.5 bg-gold/80" />
+          <span
+            className={`font-display text-[0.7rem] font-bold tracking-[0.12em] sm:text-[0.8rem] ${guru}`}
+          >
+            GURU
+          </span>
+          <span className="h-px w-2.5 bg-gold/80" />
         </span>
         <span
-          className={`block text-[0.62rem] uppercase tracking-[0.18em] sm:text-[0.68rem] sm:tracking-[0.22em] ${variant === "light" ? "text-gold" : "text-muted"}`}
+          className={`mt-px block truncate font-sans text-[0.42rem] font-semibold uppercase tracking-[0.1em] sm:text-[0.48rem] sm:tracking-[0.12em] ${tag}`}
         >
-          Guru
+          Complete Home Renovation Experts
         </span>
       </span>
     </Link>
