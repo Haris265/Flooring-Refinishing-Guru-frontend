@@ -9,6 +9,7 @@ export const BRAND = {
   website: "flooringguru.com",
   contactName: "Oves Siddiqui",
   years: 25,
+  ctaEstimate: "Call for in home free estimate",
 };
 
 export const NAV_LINKS = [

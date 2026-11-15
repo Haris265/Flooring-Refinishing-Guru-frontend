@@ -52,9 +52,12 @@ export function Header() {
             >
               {BRAND.phone}
             </a>
-            <Link href="/estimate" className="btn-primary text-sm">
-              Request Free Estimate
-            </Link>
+            <a
+              href={BRAND.phoneHref}
+              className="btn-primary whitespace-nowrap text-sm"
+            >
+              {BRAND.ctaEstimate}
+            </a>
           </nav>
 
           <div className="flex shrink-0 items-center gap-3 lg:hidden">
@@ -98,13 +101,13 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/estimate"
+              <a
+                href={BRAND.phoneHref}
                 onClick={() => setOpen(false)}
                 className="btn-primary mt-4 w-full"
               >
-                Request Free Estimate
-              </Link>
+                {BRAND.ctaEstimate}
+              </a>
               <a href={BRAND.phoneHref} className="text-center text-gold">
                 {BRAND.phone}
               </a>

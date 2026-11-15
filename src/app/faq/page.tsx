@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { getFaqs } from "@/lib/api";
@@ -41,9 +40,12 @@ export default async function FaqPage() {
             <p className="font-display text-2xl text-brown">
               Still have questions?
             </p>
-            <Link href="/estimate" className="btn-primary mt-5 inline-flex">
-              Request Free Estimate
-            </Link>
+            <a
+              href={BRAND.phoneHref}
+              className="btn-primary mt-5 inline-flex"
+            >
+              {BRAND.ctaEstimate}
+            </a>
           </div>
         </div>
       </section>

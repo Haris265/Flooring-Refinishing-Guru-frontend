@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 import { getProjects } from "@/lib/api";
+import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -75,9 +75,9 @@ export default async function ProjectsPage() {
         </div>
 
         <div className="mx-auto mt-12 max-w-6xl text-center">
-          <Link href="/estimate" className="btn-primary">
-            Start your project estimate
-          </Link>
+          <a href={BRAND.phoneHref} className="btn-primary">
+            {BRAND.ctaEstimate}
+          </a>
         </div>
       </section>
     </>

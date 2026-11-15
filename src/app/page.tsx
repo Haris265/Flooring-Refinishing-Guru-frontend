@@ -38,9 +38,12 @@ export default async function HomePage() {
             in-home estimate today.
           </p>
           <div className="fade-up-delay mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link href="/estimate" className="btn-primary w-full sm:w-auto">
-              Request Free Estimate
-            </Link>
+            <a
+              href={BRAND.phoneHref}
+              className="btn-primary w-full sm:w-auto"
+            >
+              {BRAND.ctaEstimate}
+            </a>
             <a href={BRAND.phoneHref} className="btn-ghost w-full sm:w-auto">
               Call {BRAND.phone}
             </a>
@@ -127,9 +130,12 @@ export default async function HomePage() {
               preferences. {BRAND.contactName} and the team will follow up to
               confirm availability.
             </p>
-            <Link href="/estimate" className="btn-primary mt-6 inline-flex">
-              Start your estimate
-            </Link>
+            <a
+              href={BRAND.phoneHref}
+              className="btn-primary mt-6 inline-flex"
+            >
+              {BRAND.ctaEstimate}
+            </a>
           </div>
         </div>
       </section>
@@ -163,9 +169,9 @@ export default async function HomePage() {
             Call {BRAND.phone} or request your free in-home estimate online.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link href="/estimate" className="btn-primary">
-              Request Free Estimate
-            </Link>
+            <a href={BRAND.phoneHref} className="btn-primary">
+              {BRAND.ctaEstimate}
+            </a>
             <a href={BRAND.phoneHref} className="btn-ghost">
               Call today
             </a>

@@ -26,9 +26,9 @@ export function Footer() {
               </li>
             ))}
             <li>
-              <Link href="/estimate" className="hover:text-gold">
-                Free Estimate
-              </Link>
+              <a href={BRAND.phoneHref} className="hover:text-gold">
+                {BRAND.ctaEstimate}
+              </a>
             </li>
             <li>
               <Link href="/privacy" className="hover:text-gold">
@@ -55,7 +55,7 @@ export function Footer() {
             <li className="pt-2 text-cream/60">{BRAND.website}</li>
           </ul>
           <p className="mt-6 text-xs uppercase tracking-[0.18em] text-gold/80">
-            Free in-home estimates — call today
+            {BRAND.ctaEstimate}
           </p>
         </div>
       </div>

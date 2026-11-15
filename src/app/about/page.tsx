@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 import { BRAND } from "@/lib/constants";
 
@@ -68,9 +67,9 @@ export default function AboutPage() {
                 California
               </li>
             </ul>
-            <Link href="/estimate" className="btn-primary mt-8 inline-flex">
-              Request a free estimate
-            </Link>
+            <a href={BRAND.phoneHref} className="btn-primary mt-8 inline-flex">
+              {BRAND.ctaEstimate}
+            </a>
           </div>
         </div>
       </section>
