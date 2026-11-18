@@ -4,6 +4,7 @@ import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { BRAND } from "@/lib/constants";
 
 import "./globals.css";
@@ -83,6 +84,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

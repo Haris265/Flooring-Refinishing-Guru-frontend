@@ -43,12 +43,12 @@ export default async function ServicesPage() {
             <Link
               key={service.id}
               href={`/services/${service.slug}`}
-              className="service-tile bg-white p-6"
+              className="service-tile flex flex-col bg-white p-6"
             >
               <h2 className="font-display text-2xl text-brown">
                 {service.name}
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
                 {service.short_description}
               </p>
               <span className="mt-5 inline-block text-sm font-semibold text-gold-deep">
