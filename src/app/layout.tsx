@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
 import { BRAND } from "@/lib/constants";
 
 import "./globals.css";
@@ -19,13 +20,53 @@ const sourceSans = Source_Sans_3({
   weight: ["400", "500", "600", "700"],
 });
 
+const defaultTitle = `${BRAND.shortName} | Orange County Flooring & Renovation`;
+const defaultDescription = `${BRAND.tagline}. Professional flooring installation, refinishing, and complete home renovation in Orange County. Call for an in-home free estimate. ${BRAND.years}+ years of experience.`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BRAND.siteUrl),
   title: {
-    default: `${BRAND.shortName} | Orange County Flooring & Renovation`,
+    default: defaultTitle,
     template: `%s | ${BRAND.shortName}`,
   },
-  description:
-    "Professional flooring installation, refinishing, and complete home renovation in Orange County. Free in-home estimates. 25+ years of experience.",
+  description: defaultDescription,
+  applicationName: BRAND.shortName,
+  authors: [{ name: BRAND.contactName }],
+  creator: BRAND.name,
+  publisher: BRAND.name,
+  keywords: [
+    "flooring Orange County",
+    "hardwood refinishing",
+    "floor installation",
+    "home renovation Orange County",
+    "in-home flooring estimate",
+    BRAND.shortName,
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: BRAND.siteUrl,
+    siteName: BRAND.shortName,
+    title: defaultTitle,
+    description: defaultDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+  },
+  category: "home improvement",
 };
 
 export default function RootLayout({
@@ -38,6 +79,7 @@ export default function RootLayout({
       <body
         className={`${cormorant.variable} ${sourceSans.variable} antialiased`}
       >
+        <JsonLd />
         <Header />
         <main>{children}</main>
         <Footer />

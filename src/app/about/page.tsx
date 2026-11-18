@@ -5,8 +5,13 @@ import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "Learn about Flooring & Refinishing Guru, Inc. — complete home renovation experts with 25+ years of experience in Orange County.",
+  description: `Meet ${BRAND.contactName} and Flooring & Refinishing Guru, Inc. — complete home renovation experts with ${BRAND.years}+ years of experience in Orange County.`,
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About",
+    description: `Complete home renovation experts with ${BRAND.years}+ years of experience in Orange County.`,
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {

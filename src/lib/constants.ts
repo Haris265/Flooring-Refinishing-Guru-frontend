@@ -7,6 +7,9 @@ export const BRAND = {
   email: "oves@flooringguru.com",
   emailHref: "mailto:oves@flooringguru.com",
   website: "flooringguru.com",
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+    "https://flooring-refinishing-guru.netlify.app",
   contactName: "Oves Siddiqui",
   years: 25,
   ctaEstimate: "Call for an in home free estimate",

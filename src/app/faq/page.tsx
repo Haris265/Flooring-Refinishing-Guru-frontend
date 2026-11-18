@@ -7,7 +7,14 @@ import { BRAND } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Common questions about flooring estimates, services, cost, and timing from Flooring & Refinishing Guru.",
+    "Answers about free in-home flooring estimates, service areas, materials, cost factors, and project timing in Orange County.",
+  alternates: { canonical: "/faq" },
+  openGraph: {
+    title: "FAQ",
+    description:
+      "Common questions about flooring estimates, services, cost, and timing.",
+    url: "/faq",
+  },
 };
 
 export default async function FaqPage() {

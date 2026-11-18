@@ -6,7 +6,14 @@ import { getServices } from "@/lib/api";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Flooring, remodeling, painting, drywall, plumbing, and house repairs from Flooring & Refinishing Guru.",
+    "Wood, vinyl, laminate, tile, carpet flooring plus kitchen and bathroom remodeling, painting, drywall, plumbing, and house repairs in Orange County.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Services",
+    description:
+      "Flooring installation, refinishing, and complete home renovation services in Orange County.",
+    url: "/services",
+  },
 };
 
 export default async function ServicesPage() {

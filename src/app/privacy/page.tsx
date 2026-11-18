@@ -4,6 +4,9 @@ import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
+  description: `How Flooring & Refinishing Guru collects and uses information from website estimate requests and contact forms.`,
+  alternates: { canonical: "/privacy" },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPage() {

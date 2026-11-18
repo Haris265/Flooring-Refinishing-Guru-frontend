@@ -7,7 +7,14 @@ import { BRAND } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Browse residential flooring and renovation project examples from Flooring & Refinishing Guru.",
+    "Browse residential flooring, stairs, tile, and renovation project examples from Flooring & Refinishing Guru in Orange County.",
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    title: "Projects",
+    description:
+      "Residential flooring and renovation project gallery from Flooring & Refinishing Guru.",
+    url: "/projects",
+  },
 };
 
 const FALLBACK_IMAGES = [

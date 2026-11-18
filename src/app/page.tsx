@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,6 +8,19 @@ import { BRAND } from "@/lib/constants";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `${BRAND.shortName} | Orange County Flooring & Renovation`,
+  },
+  description: `${BRAND.tagline}. Hardwood, vinyl, tile, carpet, and complete home renovation across Orange County. Call for an in-home free estimate.`,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: `${BRAND.shortName} | Orange County Flooring & Renovation`,
+    description: `${BRAND.tagline}. Flooring installation, refinishing, and renovation in Orange County.`,
+    url: "/",
+  },
+};
 
 export default async function HomePage() {
   const [services, faqs] = await Promise.all([getServices(), getFaqs()]);

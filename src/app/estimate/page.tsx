@@ -5,8 +5,14 @@ import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Free In-Home Estimate",
-  description:
-    "Request a free flooring and renovation estimate from Flooring & Refinishing Guru in Orange County.",
+  description: `Request a free in-home flooring and renovation estimate from Flooring & Refinishing Guru in Orange County. Call ${BRAND.phone} or submit the form.`,
+  alternates: { canonical: "/estimate" },
+  openGraph: {
+    title: "Free In-Home Estimate",
+    description:
+      "Request a free in-home flooring and renovation estimate in Orange County.",
+    url: "/estimate",
+  },
 };
 
 export default function EstimatePage() {
